@@ -1,0 +1,28 @@
+@layer blocks {
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-xl);
+  }
+
+  .section-title__text {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .section-title__count {
+    width: 24px;
+    height: 24px;
+    background: var(--color-background-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--color-text-light);
+  }
+}

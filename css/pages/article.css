@@ -1,0 +1,14 @@
+@layer pages {
+  .p-article {
+    background: var(--color-background-lighter);
+    min-height: 100vh;
+  }
+
+  .p-article__hero {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  }
+
+  .p-article__content {
+    background: var(--color-background-lighter);
+  }
+}

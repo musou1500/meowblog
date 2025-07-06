@@ -1,0 +1,14 @@
+@layer pages {
+  .p-about {
+    background: var(--color-background);
+    min-height: 100vh;
+  }
+
+  .p-about__hero {
+    background: var(--color-background);
+  }
+
+  .p-about__features {
+    background: var(--color-background-lighter);
+  }
+}

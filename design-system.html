@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System - Meow Blog</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/blocks/header.css">
+    <link rel="stylesheet" href="css/blocks/footer.css">
+    <link rel="stylesheet" href="css/blocks/article-card.css">
+    <link rel="stylesheet" href="css/blocks/nav-tabs.css">
+    <link rel="stylesheet" href="css/blocks/section-title.css">
+    <link rel="stylesheet" href="css/pages/design-system.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <h1>🐱 Meow Blog</h1>
+            </div>
+            <nav class="header__nav">
+                <a href="home.html" class="header__nav-link">Home</a>
+                <a href="about.html" class="header__nav-link">About</a>
+                <a href="design-system.html" class="header__nav-link header__nav-link--active">Design System</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="p-design-system">
+        <div class="p-design-system__container">
+            <header class="p-design-system__header">
+                <h1 class="p-design-system__title">Design System</h1>
+                <p class="p-design-system__subtitle">
+                    Practical design tokens and components that are actually used in this project
+                </p>
+                <div class="ds-quick-stats">
+                    <div class="ds-stat">
+                        <strong>30</strong> CSS Variables
+                    </div>
+                    <div class="ds-stat">
+                        <strong>15+</strong> Components
+                    </div>
+                    <div class="ds-stat">
+                        <strong>Zero</strong> Unused Code
+                    </div>
+                </div>
+            </header>
+
+            <!-- Quick Reference -->
+            <section class="ds-section">
+                <h2 class="ds-section__title">Quick Reference</h2>
+                <div class="ds-quick-reference">
+                    <div class="ds-quick-card">
+                        <h3>Most Used</h3>
+                        <ul>
+                            <li><code>--spacing-md</code> - Standard spacing (16px)</li>
+                            <li><code>--color-primary</code> - Main brand color</li>
+                            <li><code>--font-size-base</code> - Body text (16px)</li>
+                            <li><code>--shadow-md</code> - Card shadows</li>
+                        </ul>
+                    </div>
+                    <div class="ds-quick-card">
+                        <h3>Decision Rules</h3>
+                        <ul>
+                            <li><strong>Spacing:</strong> Start with <code>--spacing-md</code></li>
+                            <li><strong>Text:</strong> Use <code>--color-text</code> for main content</li>
+                            <li><strong>Interactive:</strong> Use <code>--color-primary</code> for CTAs</li>
+                            <li><strong>Elevation:</strong> Use <code>--shadow-md</code> for cards</li>
+                        </ul>
+                    </div>
+                    <div class="ds-quick-card">
+                        <h3>Common Patterns</h3>
+                        <ul>
+                            <li>Card: <code>--spacing-md</code> + <code>--shadow-md</code></li>
+                            <li>Button: <code>--spacing-sm</code> + <code>--color-primary</code></li>
+                            <li>Text hierarchy: <code>base</code> → <code>large</code> → <code>xl</code></li>
+                            <li>Spacing scale: <code>xs</code> → <code>sm</code> → <code>md</code> → <code>lg</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Design Tokens -->
+            <section class="ds-section">
+                <h2 class="ds-section__title">Design Tokens</h2>
+                
+                <div class="ds-subsection">
+                    <h3 class="ds-subsection__title">Colors</h3>
+                    <p class="ds-purpose">Use these colors to maintain visual consistency across the site.</p>
+                    
+                    <div class="ds-color-grid">
+                        <div class="ds-color-item">
+                            <div class="ds-color-swatch ds-color-swatch--primary"></div>
+                            <div class="ds-color-info">
+                                <div class="ds-color-name">Primary</div>
+                                <div class="ds-color-var">--color-primary</div>
+                                <div class="ds-color-value">#4a9eff</div>
+                                <div class="ds-color-when"><strong>When to use:</strong> Links, primary buttons, active states</div>
+                            </div>
+                        </div>
+                        <div class="ds-color-item">
+                            <div class="ds-color-swatch ds-color-swatch--primary-hover"></div>
+                            <div class="ds-color-info">
+                                <div class="ds-color-name">Primary Hover</div>
+                                <div class="ds-color-var">--color-primary-hover</div>
+                                <div class="ds-color-value">#3b87d9</div>
+                                <div class="ds-color-when"><strong>When to use:</strong> Hover states for primary elements only</div>
+                            </div>
+                        </div>
+                        <div class="ds-color-item">
+                            <div class="ds-color-swatch ds-color-swatch--accent"></div>
+                            <div class="ds-color-info">
+                                <div class="ds-color-name">Accent</div>
+                                <div class="ds-color-var">--color-accent</div>
+                                <div class="ds-color-value">#ffb347</div>
+                                <div class="ds-color-when"><strong>When to use:</strong> Highlights, notifications, secondary actions</div>
+                            </div>
+                        </div>
+                        <div class="ds-color-item">
+                            <div class="ds-color-swatch ds-color-swatch--text"></div>
+                            <div class="ds-color-info">
+                                <div class="ds-color-name">Text</div>
+                                <div class="ds-color-var">--color-text</div>
+                                <div class="ds-color-value">#333</div>
+                                <div class="ds-color-when"><strong>When to use:</strong> All main content, headings (default choice)</div>
+                            </div>
+                        </div>
+                        <div class="ds-color-item">
+                            <div class="ds-color-swatch ds-color-swatch--text-light"></div>
+                            <div class="ds-color-info">
+                                <div class="ds-color-name">Text Light</div>
+                                <div class="ds-color-var">--color-text-light</div>
+                                <div class="ds-color-value">#666</div>
+                                <div class="ds-color-when"><strong>When to use:</strong> Captions, metadata, less important text</div>
+                            </div>
+                        </div>
+                        <div class="ds-color-item">
+                            <div class="ds-color-swatch ds-color-swatch--border"></div>
+                            <div class="ds-color-info">
+                                <div class="ds-color-name">Border</div>
+                                <div class="ds-color-var">--color-border</div>
+                                <div class="ds-color-value">#e0e0e0</div>
+                                <div class="ds-color-when"><strong>When to use:</strong> Dividers, card borders, form inputs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-subsection">
+                    <h3 class="ds-subsection__title">Typography</h3>
+                    <p class="ds-purpose">Simple font scale - start with base, go bigger for headings, smaller for details.</p>
+                    
+                    <div class="ds-typography-simple">
+                        <div class="ds-typography-decision">
+                            <h4>Choose by Purpose:</h4>
+                            <ul>
+                                <li><strong>Page title:</strong> <code>--font-size-xxl</code> (32px)</li>
+                                <li><strong>Section heading:</strong> <code>--font-size-xl</code> (24px)</li>
+                                <li><strong>Card title:</strong> <code>--font-size-large</code> (18px)</li>
+                                <li><strong>Body text:</strong> <code>--font-size-base</code> (16px) ← Start here</li>
+                                <li><strong>Caption/meta:</strong> <code>--font-size-small</code> (14px)</li>
+                            </ul>
+                        </div>
+                        <div class="ds-typography-samples">
+                            <div class="ds-typo-sample ds-typo-sample--xxl">Page Title (32px)</div>
+                            <div class="ds-typo-sample ds-typo-sample--xl">Section Heading (24px)</div>
+                            <div class="ds-typo-sample ds-typo-sample--large">Card Title (18px)</div>
+                            <div class="ds-typo-sample ds-typo-sample--base">Body Text (16px)</div>
+                            <div class="ds-typo-sample ds-typo-sample--small">Caption Text (14px)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-subsection">
+                    <h3 class="ds-subsection__title">Spacing</h3>
+                    <p class="ds-purpose">Start with <code>--spacing-md</code> for most cases. Go smaller for tight layouts, bigger for separation.</p>
+                    
+                    <div class="ds-spacing-decision">
+                        <div class="ds-spacing-rule">
+                            <h4>Decision Tree:</h4>
+                            <ol>
+                                <li><strong>Between page sections?</strong> → <code>--spacing-xxl</code> (48px)</li>
+                                <li><strong>Between components?</strong> → <code>--spacing-xl</code> (32px)</li>
+                                <li><strong>Inside components?</strong> → <code>--spacing-md</code> (16px) ← Default</li>
+                                <li><strong>Button padding?</strong> → <code>--spacing-sm</code> (8px)</li>
+                                <li><strong>Icon to text?</strong> → <code>--spacing-xs</code> (4px)</li>
+                            </ol>
+                        </div>
+                        <div class="ds-spacing-visual">
+                            <div class="ds-spacing-demo">
+                                <div class="ds-space-item ds-space-xxl">XXL - 48px</div>
+                                <div class="ds-space-item ds-space-xl">XL - 32px</div>
+                                <div class="ds-space-item ds-space-lg">LG - 24px</div>
+                                <div class="ds-space-item ds-space-md">MD - 16px ← Default</div>
+                                <div class="ds-space-item ds-space-sm">SM - 8px</div>
+                                <div class="ds-space-item ds-space-xs">XS - 4px</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-subsection">
+                    <h3 class="ds-subsection__title">Shadows</h3>
+                    <p class="ds-purpose">Use <code>--shadow-md</code> for most cards. Only go bigger for overlays that need more emphasis.</p>
+                    
+                    <div class="ds-shadow-simple">
+                        <div class="ds-shadow-when">
+                            <h4>When to Use:</h4>
+                            <ul>
+                                <li><strong>Cards, content blocks:</strong> <code>--shadow-md</code> ← Start here</li>
+                                <li><strong>Dropdowns, tooltips:</strong> <code>--shadow-lg</code></li>
+                                <li><strong>Modals, important overlays:</strong> <code>--shadow-xl</code></li>
+                                <li><strong>Hover effects only:</strong> <code>--shadow-sm</code></li>
+                            </ul>
+                        </div>
+                        <div class="ds-shadow-samples">
+                            <div class="ds-shadow-demo ds-shadow-demo--sm">Hover (sm)</div>
+                            <div class="ds-shadow-demo ds-shadow-demo--md">Cards (md)</div>
+                            <div class="ds-shadow-demo ds-shadow-demo--lg">Dropdowns (lg)</div>
+                            <div class="ds-shadow-demo ds-shadow-demo--xl">Modals (xl)</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Real Components -->
+            <section class="ds-section">
+                <h2 class="ds-section__title">Components in Use</h2>
+                <p class="ds-purpose">These are the actual components used in this project. Copy the CSS class names for your own use.</p>
+                
+                <div class="ds-component-examples">
+                    <div class="ds-component-example">
+                        <h3 class="ds-component-example__title">Article Card</h3>
+                        <div class="ds-component-demo">
+                            <div class="article-card">
+                                <div class="article-card__icon article-card__icon--bulb">💡</div>
+                                <div class="article-card__content">
+                                    <h3 class="article-card__title">Real Component Example</h3>
+                                    <div class="article-card__meta">
+                                        <div class="article-card__author">
+                                            <div class="article-card__author-avatar"></div>
+                                            <span>Author Name</span>
+                                        </div>
+                                        <div class="article-card__date">Today</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ds-component-code">
+                            <h4>Copy this HTML:</h4>
+                            <pre><code>&lt;div class="article-card"&gt;
+  &lt;div class="article-card__icon"&gt;💡&lt;/div&gt;
+  &lt;div class="article-card__content"&gt;
+    &lt;h3 class="article-card__title"&gt;Title&lt;/h3&gt;
+    &lt;div class="article-card__meta"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="ds-component-example">
+                        <h3 class="ds-component-example__title">Navigation Tabs</h3>
+                        <div class="ds-component-demo">
+                            <nav class="nav-tabs">
+                                <div class="nav-tabs__item nav-tabs__item--active">Active</div>
+                                <div class="nav-tabs__item">Inactive</div>
+                                <div class="nav-tabs__item">Another</div>
+                            </nav>
+                        </div>
+                        <div class="ds-component-code">
+                            <h4>Copy this HTML:</h4>
+                            <pre><code>&lt;nav class="nav-tabs"&gt;
+  &lt;div class="nav-tabs__item nav-tabs__item--active"&gt;Active&lt;/div&gt;
+  &lt;div class="nav-tabs__item"&gt;Inactive&lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Common Patterns -->
+            <section class="ds-section">
+                <h2 class="ds-section__title">Common Patterns</h2>
+                <p class="ds-purpose">Copy these proven combinations. No need to overthink - these work.</p>
+                
+                <div class="ds-patterns">
+                    <div class="ds-pattern">
+                        <h3>Standard Card</h3>
+                        <div class="ds-pattern-demo">
+                            <div class="ds-demo-card">
+                                <h4>Card Title</h4>
+                                <p>Card content goes here...</p>
+                            </div>
+                        </div>
+                        <div class="ds-pattern-code">
+                            <pre><code>.card {
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--border-radius);
+  background: var(--color-background);
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="ds-pattern">
+                        <h3>Primary Button</h3>
+                        <div class="ds-pattern-demo">
+                            <button class="ds-demo-button">Click me</button>
+                        </div>
+                        <div class="ds-pattern-code">
+                            <pre><code>.button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+.button:hover {
+  background: var(--color-primary-hover);
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="ds-pattern">
+                        <h3>Text Hierarchy</h3>
+                        <div class="ds-pattern-demo">
+                            <h1 class="ds-demo-h1">Page Title</h1>
+                            <h2 class="ds-demo-h2">Section Title</h2>
+                            <p class="ds-demo-p">Body text content</p>
+                            <small class="ds-demo-small">Caption text</small>
+                        </div>
+                        <div class="ds-pattern-code">
+                            <pre><code>h1 { font-size: var(--font-size-xxl); }
+h2 { font-size: var(--font-size-xl); }
+p { font-size: var(--font-size-base); }
+small { font-size: var(--font-size-small); }</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usage Guidelines -->
+            <section class="ds-section">
+                <h2 class="ds-section__title">Usage Guidelines</h2>
+                
+                <div class="ds-subsection">
+                    <h3 class="ds-subsection__title">BEM Methodology</h3>
+                    <div class="ds-code-example">
+                        <pre><code>/* Block */
+.card { }
+
+/* Element */
+.card__header { }
+.card__title { }
+.card__content { }
+
+/* Modifier */
+.card--featured { }
+.card--large { }</code></pre>
+                    </div>
+                </div>
+
+                <div class="ds-subsection">
+                    <h3 class="ds-subsection__title">File Structure</h3>
+                    <div class="ds-code-example">
+                        <pre><code>css/
+├── base.css
+├── blocks/
+│   ├── button.css
+│   ├── card.css
+│   └── nav.css
+└── pages/
+    ├── home.css
+    └── about.css</code></pre>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">🐱 Meow Blog</h3>
+                    <p class="footer__description">
+                        A delightful blog about cats, technology, and everything in between.
+                    </p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="home.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="design-system.html" class="footer__link">Design System</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Meow Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

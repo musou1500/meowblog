@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - 🐱 Meow Blog</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/blocks/header.css">
+  <link rel="stylesheet" href="css/blocks/about-hero.css">
+  <link rel="stylesheet" href="css/blocks/hero-illustration.css">
+  <link rel="stylesheet" href="css/blocks/about-features.css">
+  <link rel="stylesheet" href="css/blocks/feature-card.css">
+  <link rel="stylesheet" href="css/blocks/footer.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__brand">
+      <div class="header__brand-logo">🐱</div>
+      <span>Meow Blog</span>
+    </div>
+    <nav class="header__nav">
+      <button class="header__search" aria-label="検索">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+      </button>
+      <button class="header__notification" aria-label="通知">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+        </svg>
+      </button>
+      <div class="header__profile">🐾</div>
+      <button class="header__login-btn">にゃー投稿</button>
+    </nav>
+  </header>
+
+  <main class="p-about">
+    <section class="about-hero">
+      <div class="about-hero__content">
+        <h1 class="about-hero__title">Purr for yourself.</h1>
+        <p class="about-hero__description">
+          Meow Blogは猫好きのための新しい情報共有コミュニティです。
+          誰かのために、愛猫のために知識と愛情を共有しましょう。
+        </p>
+      </div>
+      <div class="about-hero__illustration">
+        <div class="hero-illustration">
+          <div class="hero-illustration__image">
+            <div class="hero-illustration__person">
+              <div class="hero-illustration__laptop"></div>
+            </div>
+            <div class="hero-illustration__decoration hero-illustration__decoration--1"></div>
+            <div class="hero-illustration__decoration hero-illustration__decoration--2"></div>
+            <div class="hero-illustration__decoration hero-illustration__decoration--3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-features">
+      <div class="about-features__container">
+        <h2 class="about-features__title">にゃんこ機能紹介</h2>
+        <div class="about-features__grid">
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--write">
+              <div class="feature-card__illustration feature-card__illustration--person"></div>
+            </div>
+            <h3 class="feature-card__title">猫の日常は気軽に</h3>
+            <p class="feature-card__subtitle">記事にしよう</p>
+            <p class="feature-card__description">
+              かわいい猫の行動や発見を気軽に記事として投稿できます。
+              小さなかわいさでも、誰かの心を温めるかもしれません。
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--knowledge">
+              <div class="feature-card__illustration feature-card__illustration--money"></div>
+            </div>
+            <h3 class="feature-card__title">猫の専門知識は</h3>
+            <p class="feature-card__subtitle">本にして販売しよう</p>
+            <p class="feature-card__description">
+              猫の飼育方法や健康管理の専門知識は、
+              電子書籍として販売することができます。
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--community">
+              <div class="feature-card__illustration feature-card__illustration--support"></div>
+            </div>
+            <h3 class="feature-card__title">肉球バッジを贈って</h3>
+            <p class="feature-card__subtitle">著者を応援しよう</p>
+            <p class="feature-card__description">
+              気に入った記事や本の著者に、
+              感謝の気持ちを肉球バッジで表現できます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <div class="footer__brand-logo">
+            <div class="footer__brand-icon">🐱</div>
+            <span>Meow Blog</span>
+          </div>
+          <div class="footer__brand-tagline">猫好きのための<br>情報共有コミュニティ</div>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__section-title">About</h3>
+          <a href="#" class="footer__link">Meow Blogについて</a>
+          <a href="#" class="footer__link">運営にゃんこ</a>
+          <a href="#" class="footer__link">お知らせ・新着情報</a>
+          <a href="#" class="footer__link">猫イベント</a>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__section-title">Guides</h3>
+          <a href="#" class="footer__link">使い方ガイド</a>
+          <a href="#" class="footer__link">
+            猫カフェ向けプラン
+            <span class="footer__link-badge">New</span>
+          </a>
+          <a href="#" class="footer__link">猫雑誌 / プロ</a>
+          <a href="#" class="footer__link">よくある質問</a>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__section-title">Links</h3>
+          <a href="#" class="footer__link">X(Twitter)</a>
+          <a href="#" class="footer__link">Instagram</a>
+          <a href="#" class="footer__link">猫メディアキット</a>
+        </div>
+
+        <div class="footer__section">
+          <h3 class="footer__section-title">Legal</h3>
+          <a href="#" class="footer__link">利用規約</a>
+          <a href="#" class="footer__link">プライバシーポリシー</a>
+          <a href="#" class="footer__link">特商法表記</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <a href="#" class="footer__classmethod">🐾 にゃんと</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

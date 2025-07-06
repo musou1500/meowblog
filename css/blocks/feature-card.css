@@ -1,0 +1,143 @@
+@layer blocks {
+  .feature-card {
+    background: var(--color-background);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .feature-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+
+  .feature-card__icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card__icon--write {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  }
+
+  .feature-card__icon--knowledge {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffcc80 100%);
+  }
+
+  .feature-card__icon--community {
+    background: linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%);
+  }
+
+  .feature-card__icon::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--color-background);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .feature-card__icon--write::before {
+    content: '📝';
+  }
+
+  .feature-card__icon--knowledge::before {
+    content: '💰';
+  }
+
+  .feature-card__icon--community::before {
+    content: '🎒';
+  }
+
+  .feature-card__illustration {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.6;
+  }
+
+  .feature-card__illustration--person {
+    background: linear-gradient(135deg, #ff8a65 0%, #ff7043 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-card__illustration--person::before {
+    content: '👨‍💻';
+    font-size: 30px;
+  }
+
+  .feature-card__illustration--money {
+    background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-card__illustration--money::before {
+    content: '💸';
+    font-size: 30px;
+  }
+
+  .feature-card__illustration--support {
+    background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-card__illustration--support::before {
+    content: '🤝';
+    font-size: 30px;
+  }
+
+  .feature-card__title {
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .feature-card__subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .feature-card__description {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .feature-card {
+      padding: var(--spacing-lg);
+    }
+    
+    .feature-card__icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

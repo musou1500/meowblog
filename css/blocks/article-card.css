@@ -1,0 +1,107 @@
+@layer blocks {
+  .article-card {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--color-background);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+
+  .article-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .article-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 24px;
+  }
+
+  .article-card__icon--bulb {
+    background: linear-gradient(135deg, #ffd700, #ffb347);
+  }
+
+  .article-card__icon--presentation {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  }
+
+  .article-card__icon--code {
+    background: linear-gradient(135deg, #4ecdc4, #6bcf7f);
+  }
+
+  .article-card__icon--shield {
+    background: linear-gradient(135deg, #4a9eff, #6bb6ff);
+  }
+
+  .article-card__icon--elephant {
+    background: linear-gradient(135deg, #9b59b6, #bb6bd9);
+  }
+
+  .article-card__content {
+    flex: 1;
+  }
+
+  .article-card__title {
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.4;
+  }
+
+  .article-card__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+  }
+
+  .article-card__author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-small);
+    color: var(--color-text-light);
+  }
+
+  .article-card__author-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+
+  .article-card__date {
+    font-size: var(--font-size-small);
+    color: var(--color-text-lighter);
+  }
+
+  .article-card__stats {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-left: auto;
+  }
+
+  .article-card__stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-small);
+    color: var(--color-text-lighter);
+  }
+
+  .article-card__stat-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

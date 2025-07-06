@@ -1,0 +1,31 @@
+@layer blocks {
+  .article-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .article-actions__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    background: var(--color-background-light);
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .article-actions__action:hover {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .article-actions__action-count {
+    font-weight: 600;
+    margin-left: auto;
+  }
+}

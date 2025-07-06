@@ -1,0 +1,38 @@
+@layer blocks {
+  .table-of-contents {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .table-of-contents__item {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .table-of-contents__link {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .table-of-contents__link:hover {
+    background: var(--color-background-light);
+    color: var(--color-text);
+  }
+
+  .table-of-contents__link--active {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .table-of-contents__link--level-2 {
+    margin-left: var(--spacing-sm);
+  }
+
+  .table-of-contents__link--level-3 {
+    margin-left: var(--spacing-md);
+  }
+}

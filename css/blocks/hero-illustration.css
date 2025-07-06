@@ -1,0 +1,111 @@
+@layer blocks {
+  .hero-illustration {
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+  }
+
+  .hero-illustration__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%);
+    padding: var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-illustration__person {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #ff8a65 0%, #ff7043 100%);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-xl) auto;
+  }
+
+  .hero-illustration__person::before {
+    content: '👩‍💻';
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-illustration__laptop {
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    border-radius: var(--border-radius);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-illustration__laptop::before {
+    content: '💻';
+    font-size: 40px;
+  }
+
+  .hero-illustration__decoration {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4a9eff 0%, #6bb6ff 100%);
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+
+  .hero-illustration__decoration--1 {
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .hero-illustration__decoration--2 {
+    top: 60%;
+    right: 15%;
+    animation: float 8s ease-in-out infinite reverse;
+  }
+
+  .hero-illustration__decoration--3 {
+    bottom: 20%;
+    left: 20%;
+    animation: float 7s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @media (max-width: 768px) {
+    .hero-illustration__person {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .hero-illustration__person::before {
+      font-size: 60px;
+    }
+    
+    .hero-illustration__laptop {
+      width: 80px;
+      height: 60px;
+    }
+    
+    .hero-illustration__laptop::before {
+      font-size: 30px;
+    }
+  }
+}

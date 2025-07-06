@@ -1,0 +1,59 @@
+@layer blocks {
+  .about-hero {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxl);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xxl) var(--spacing-xl);
+    min-height: 60vh;
+  }
+
+  .about-hero__content {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .about-hero__title {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.2;
+  }
+
+  .about-hero__description {
+    font-size: var(--font-size-large);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .about-hero__illustration {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  @media (max-width: 1024px) {
+    .about-hero {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--spacing-xl);
+    }
+    
+    .about-hero__content {
+      max-width: none;
+    }
+    
+    .about-hero__title {
+      font-size: var(--font-size-xl);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-hero {
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+  }
+}
