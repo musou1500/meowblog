@@ -1,70 +1,70 @@
-# CSS Design Guidelines
+# CSSデザインガイドライン
 
-Practical CSS rules for this project. Focus on what works, avoid over-engineering.
+このプロジェクトのための実用的なCSSルール。機能することに重点を置き、過度な設計を避ける。
 
-## Core Principles
+## 核となる原則
 
-1. **Use what exists** - Don't add new CSS variables unless absolutely necessary
-2. **Follow BEM** - Use `block__element--modifier` naming consistently  
-3. **Start with defaults** - Use `--spacing-md`, `--color-text`, `--font-size-base` first
-4. **Copy working patterns** - See design-system.html for proven combinations
+1. **既存のものを使用** - 絶対に必要でない限り、新しいCSS変数を追加しない
+2. **BEMに従う** - `block__element--modifier`の命名を一貫して使用
+3. **デフォルトから始める** - まず`--spacing-md`、`--color-text`、`--font-size-base`を使用
+4. **動作するパターンをコピー** - 実証済みの組み合わせについてはdesign-system.htmlを参照
 
-## Quick Decision Guide
+## クイック判断ガイド
 
-### What CSS Variable Should I Use?
+### どのCSS変数を使用すべきか？
 
-**For Spacing:**
-- Between page sections? → `--spacing-xxl` (48px)
-- Between components? → `--spacing-xl` (32px)  
-- Inside components? → `--spacing-md` (16px) ← **Start here**
-- Button padding? → `--spacing-sm` (8px)
-- Icon to text? → `--spacing-xs` (4px)
+**スペーシングの場合:**
+- ページセクション間？ → `--spacing-xxl` (48px)
+- コンポーネント間？ → `--spacing-xl` (32px)  
+- コンポーネント内？ → `--spacing-md` (16px) ← **ここから始める**
+- ボタンパディング？ → `--spacing-sm` (8px)
+- アイコンからテキスト？ → `--spacing-xs` (4px)
 
-**For Colors:**
-- Main text? → `--color-text` ← **Start here**
-- Secondary text? → `--color-text-light`
-- Interactive elements? → `--color-primary`
-- Highlights? → `--color-accent`
+**カラーの場合:**
+- メインテキスト？ → `--color-text` ← **ここから始める**
+- セカンダリテキスト？ → `--color-text-light`
+- インタラクティブ要素？ → `--color-primary`
+- ハイライト？ → `--color-accent`
 
-**For Typography:**
-- Page titles? → `--font-size-xxl` (32px)
-- Section headings? → `--font-size-xl` (24px)
-- Card titles? → `--font-size-large` (18px)
-- Body text? → `--font-size-base` (16px) ← **Start here**
-- Captions? → `--font-size-small` (14px)
+**タイポグラフィの場合:**
+- ページタイトル？ → `--font-size-xxl` (32px)
+- セクション見出し？ → `--font-size-xl` (24px)
+- カードタイトル？ → `--font-size-large` (18px)
+- 本文テキスト？ → `--font-size-base` (16px) ← **ここから始める**
+- キャプション？ → `--font-size-small` (14px)
 
-**For Shadows:**
-- Cards? → `--shadow-md` ← **Start here**
-- Dropdowns? → `--shadow-lg`  
-- Modals? → `--shadow-xl`
-- Hover effects? → `--shadow-sm`
+**シャドウの場合:**
+- カード？ → `--shadow-md` ← **ここから始める**
+- ドロップダウン？ → `--shadow-lg`  
+- モーダル？ → `--shadow-xl`
+- ホバー効果？ → `--shadow-sm`
 
-## BEM Rules (Simple Version)
+## BEMルール（シンプル版）
 
-### Class Naming: `block__element--modifier`
+### クラス命名: `block__element--modifier`
 
-**Good Examples:**
-- `.article-card` (block)
-- `.article-card__title` (element)  
-- `.article-card--featured` (modifier)
+**良い例:**
+- `.article-card` (ブロック)
+- `.article-card__title` (エレメント)  
+- `.article-card--featured` (モディファイア)
 
-**Bad Examples:**
-- `.article-card__header__title` (too deep - max 1 level)
-- `.articleCard` (use kebab-case, not camelCase)
+**悪い例:**
+- `.article-card__header__title` (深すぎる - 最大1レベル)
+- `.articleCard` (camelCaseではなくkebab-caseを使用)
 
-### When to Split a Component
+### コンポーネントを分割するタイミング
 
-**Keep together if:**
-- Everything serves one clear purpose
-- You can explain it in one sentence
-- < 10 elements total
+**一緒にしておく場合:**
+- すべてが1つの明確な目的を果たしている
+- 1つの文で説明できる
+- 合計10未満の要素
 
-**Split if:**
-- Component does multiple things
-- Elements could be reused elsewhere
-- Hard to remember what's inside
+**分割する場合:**
+- コンポーネントが複数のことを行っている
+- 要素が他の場所で再利用される可能性がある
+- 中身を覚えるのが困難
 
-### File Organization
+### ファイル構成
 
 ```
 css/
@@ -78,9 +78,9 @@ css/
     └── article.css
 ```
 
-## Common Patterns (Copy These)
+## よくあるパターン（これらをコピー）
 
-### Standard Button
+### 標準ボタン
 ```css
 .button {
   padding: var(--spacing-sm) var(--spacing-md);
@@ -96,7 +96,7 @@ css/
 }
 ```
 
-### Card Component  
+### カードコンポーネント  
 ```css
 .card {
   padding: var(--spacing-md);
@@ -112,7 +112,7 @@ css/
 }
 ```
 
-### Text Hierarchy
+### テキスト階層
 ```css
 h1 { font-size: var(--font-size-xxl); }  /* Page titles */
 h2 { font-size: var(--font-size-xl); }   /* Section titles */
@@ -121,153 +121,153 @@ p { font-size: var(--font-size-base); }   /* Body text */
 small { font-size: var(--font-size-small); } /* Captions */
 ```
 
-## Scope of Influence Guidelines
+## 影響範囲ガイドライン
 
-### The Problem: Unclear Impact
-When CSS has unclear scope, developers can't predict what will be affected by changes. This leads to broken layouts and fear of modifying styles.
+### 問題: 不明確な影響
+CSSのスコープが不明確だと、開発者は変更によって何が影響を受けるか予測できません。これはレイアウトの破綻やスタイルの修正への恐怖を引き起こします。
 
-### Core Rule: Make Scope Obvious
-Every CSS rule should make it clear **exactly** what elements it will affect.
+### 核ルール: スコープを明確にする
+すべてのCSSルールは、それが**正確に**どの要素に影響を与えるかを明確にすべきです。
 
-### Tag Selectors: Usually Avoid
+### タグセレクタ: 通常は避ける
 ```css
-/* Bad - affects ALL h1 elements everywhere */
+/* 悪い - すべての場所のh1要素に影響 */
 h1 {
   font-size: 32px;
   color: red;
 }
 
-/* Good - affects only article titles */
+/* 良い - 記事タイトルのみに影響 */
 .article__title {
   font-size: var(--font-size-xxl);
   color: var(--color-text);
 }
 ```
 
-**Exception:** Tag selectors are OK for primitive/reset styles:
+**例外:** タグセレクタはプリミティブ/リセットスタイルでは問題ありません:
 ```css
-/* OK - basic reset/primitive styles */
+/* OK - 基本リセット/プリミティブスタイル */
 * { box-sizing: border-box; }
 body { font-family: var(--font-family-primary); }
 img { max-width: 100%; }
 ```
 
-### Class Selectors: Preferred
+### クラスセレクタ: 推奨
 ```css
-/* Good - clear scope */
+/* 良い - 明確なスコープ */
 .hero-illustration__person::before {
   content: '👩‍💻';
   font-size: 80px;
 }
 
-/* Good - modifier affects specific state */
+/* 良い - モディファイアが特定の状態に影響 */
 .nav-tabs__item--active {
   background: var(--color-primary);
   color: white;
 }
 ```
 
-### Descendant Selectors: Use Carefully
+### 子孫セレクタ: 注意して使用
 ```css
-/* Risky - could affect nested components */
+/* リスキー - ネストされたコンポーネントに影響する可能性 */
 .article p {
   margin-bottom: var(--spacing-md);
 }
 
-/* Better - explicit about what you're targeting */
+/* より良い - ターゲットについて明示的 */
 .article__content p {
   margin-bottom: var(--spacing-md);
 }
 
-/* Best - use BEM classes */
+/* 最適 - BEMクラスを使用 */
 .article__paragraph {
   margin-bottom: var(--spacing-md);
 }
 ```
 
-### Page Overrides: Minimal and Explicit
+### ページオーバーライド: 最小限で明示的
 ```css
-/* Bad - too broad scope */
+/* 悪い - スコープが幅広すぎる */
 .p-about h1 { font-size: 40px; }
 
-/* Good - specific and contained */
+/* 良い - 具体的で包含された */
 .p-about__hero-title {
   font-size: var(--font-size-xxl);
 }
 
-/* OK - clearly scoped override */
+/* OK - 明確にスコープされたオーバーライド */
 .p-design-system .article-card {
   margin-bottom: var(--spacing-xl);
 }
 ```
 
-### Decision Framework
-Before writing CSS, ask:
-1. **What exactly will this affect?** If you can't answer precisely, use more specific selectors.
-2. **Will this break if HTML structure changes?** If yes, use BEM classes instead.
-3. **Could this accidentally style other components?** If yes, increase specificity.
-4. **Can another developer understand the scope?** If no, add comments or use clearer selectors.
+### 判断フレームワーク
+CSSを書く前に問いかける:
+1. **これは正確に何に影響するか？** 正確に答えられない場合は、より具体的なセレクタを使用。
+2. **HTML構造が変わったらこれは壊れるか？** はいの場合、代わりにBEMクラスを使用。
+3. **これは他のコンポーネントを誤ってスタイルする可能性があるか？** はいの場合、特定性を上げる。
+4. **他の開発者がスコープを理解できるか？** いいえの場合、コメントを追加するか、より明確なセレクタを使用。
 
-## What NOT to Do
+## やってはいけないこと
 
-### Don't Create New Variables
+### 新しい変数を作成しない
 ```css
-/* Bad - creating new variables */
+/* 悪い - 新しい変数を作成 */
 :root {
   --my-special-spacing: 13px;
   --custom-blue: #1234ff;
 }
 
-/* Good - use existing ones */
+/* 良い - 既存のものを使用 */
 .my-component {
   padding: var(--spacing-md);
   color: var(--color-primary);
 }
 ```
 
-### Don't Go Too Deep with BEM
+### BEMで深くなりすぎない
 ```html
-<!-- Bad - too nested -->
+<!-- 悪い - ネストが深すぎる -->
 <div class="card__header__title__icon--small">
 
-<!-- Good - extract or flatten -->
+<!-- 良い - 抽出または平均化 -->
 <div class="card__title-icon card__title-icon--small">
 <!-- or -->
 <div class="title-icon title-icon--small">
 ```
 
-### Don't Make Pages Override Everything
+### ページですべてをオーバーライドしない
 ```css
-/* Bad - page styles doing too much */
+/* 悪い - ページスタイルがやりすぎ */
 .p-home .card { /* completely different card */ }
 .p-home .button { /* completely different button */ }
 
-/* Good - page styles for layout only */
+/* 良い - レイアウトのみのページスタイル */
 .p-home { /* page layout */ }
 .p-home__hero { /* page-specific sections */ }
 ```
 
-### Don't Write CSS with Unclear Scope
+### 不明確なスコープでCSSを書かない
 ```css
-/* Bad - unclear what this affects */
+/* 悪い - 何に影響するか不明 */
 h1 { font-size: 40px; color: blue; }
 p { margin: 20px; }
 .content div { padding: 10px; }
 
-/* Good - explicit scope */
+/* 良い - 明示的なスコープ */
 .page-title { font-size: var(--font-size-xxl); }
 .article__paragraph { margin-bottom: var(--spacing-md); }
 .sidebar__widget { padding: var(--spacing-sm); }
 ```
 
-### Don't Use Overly Complex Selectors
+### 過度に複雑なセレクタを使用しない
 ```css
-/* Bad - fragile and unclear */
+/* 悪い - 脆弱で不明確 */
 .main .content .sidebar ul li a:not(.active) {
   color: var(--color-text-light);
 }
 
-/* Good - simple and clear */
+/* 良い - シンプルで明確 */
 .sidebar__link {
   color: var(--color-text-light);
 }
@@ -277,19 +277,19 @@ p { margin: 20px; }
 }
 ```
 
-## Development Commands
+## 開発コマンド
 
 ```bash
-# Development server
+# 開発サーバー
 npm run dev
 
-# Build for production  
+# 本番用ビルド  
 npm run build
 ```
 
-## Available CSS Variables (30 total)
+## 使用可能CSS変数（合計30個）
 
-### Colors (14)
+### カラー (14個)
 - `--color-primary` #4a9eff
 - `--color-primary-hover` #3b87d9
 - `--color-accent` #ffb347
@@ -302,7 +302,7 @@ npm run build
 - `--color-border` #e0e0e0
 - `--color-border-light` #f0f0f0
 
-### Typography (6)
+### タイポグラフィ (6個)
 - `--font-family-primary` (system fonts)
 - `--font-size-base` 16px
 - `--font-size-small` 14px
@@ -310,7 +310,7 @@ npm run build
 - `--font-size-xl` 24px
 - `--font-size-xxl` 32px
 
-### Spacing (6)
+### スペーシング (6個)
 - `--spacing-xs` 4px
 - `--spacing-sm` 8px  
 - `--spacing-md` 16px ← **Default**
@@ -318,16 +318,16 @@ npm run build
 - `--spacing-xl` 32px
 - `--spacing-xxl` 48px
 
-### Shadows (4)
+### シャドウ (4個)
 - `--shadow-sm` (hover effects)
 - `--shadow-md` (cards) ← **Default**
 - `--shadow-lg` (dropdowns)
 - `--shadow-xl` (modals)
 
-### Other
+### その他
 - `--border-radius` 8px
 - `--border-radius-sm` 4px
 - `--border-radius-lg` 12px
 - `--transition-fast` 150ms ease-in-out
 
-That's it! Keep it simple.
+以上です！シンプルに保ちましょう。
